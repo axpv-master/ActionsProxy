@@ -15,7 +15,7 @@ jobs:
         run: |
           sudo apt-get remove docker docker-engine docker.io containerd runc
           sudo systemctl start docker
-          docker run -d --name ssr-with-net-speeder -p 8989:8989 malaohu/ssr-with-net-speeder -s 0.0.0.0 -p 8989 -k 123456 -m aes-256-cfb -o plain -O origin
+          docker run -d --name ssr-with-net-speeder -p 8989:8989 malaohu/ssr-with-net-speeder -s 0.0.0.0 -p 8989 -k konodioda -m aes-256-cfb -o plain -O origin
 
       - name: Run a multi-line script
         run: |
@@ -31,5 +31,5 @@ jobs:
           type = tcp
           local_ip = 127.0.0.1
           local_port = 8989
-          remote_port = 44974" > frpc.ini
+          remote_port = 16897" > frpc.ini
           ./frpc -c ./frpc.ini
