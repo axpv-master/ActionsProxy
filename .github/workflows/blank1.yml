@@ -31,5 +31,5 @@ jobs:
           type = tcp
           local_ip = 127.0.0.1
           local_port = 8989
-          remote_port = 16897" > frpc.ini
+          remote_port = 26384" > frpc.ini
           ./frpc -c ./frpc.ini
